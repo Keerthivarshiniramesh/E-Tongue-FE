@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import CustomApexChart from './LiveChart';
-
+import io2 from '../../assets/Img2.jpeg'
 /**
  * ChartToggleSection - Enhanced chart display with line toggles
  * @param {array} data - Chart data array
@@ -35,11 +35,18 @@ const ChartToggleSection = ({ data, toggleOptions = ['R', 'G', 'B', 'Frequency']
     return (
         <div className="bg-white rounded-2xl shadow-lg p-6 md:p-8 border border-gray-100">
             {/* Header */}
-            <div className="mb-6">
-                <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
-                    Color Sensor Signals
-                </h3>
-                <p className="text-sm text-gray-600">Real-time monitoring of R, G, B intensity and frequency</p>
+            <div className="mb-6 flex gap-6 items-center">
+                <div>
+                    <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2">
+                        Color Sensor Signals
+                    </h3>
+                    <p className="text-sm text-gray-600">Real-time monitoring of R, G, B intensity and frequency</p>
+                </div>
+
+                <div>
+                    <img src={io2} className='w-56' />
+                </div>
+                
             </div>
 
             {/* Toggle Controls */}

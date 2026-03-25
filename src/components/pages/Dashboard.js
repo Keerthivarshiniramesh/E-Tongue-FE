@@ -8,6 +8,7 @@ import ChartToggleSection from '../blocks/ChartToggleSection'
 import { THINGSPEAK_URL } from '../../utils/ThinkSpeak'
 import * as XLSX from "xlsx";
 import { FiDownload, FiRefreshCw } from 'react-icons/fi'
+import iot1 from '../../assets/Img1.jpeg'
 
 export const ETongue = () => {
     const { controls } = useContext(DContext)
@@ -233,14 +234,20 @@ export const ETongue = () => {
                     </div>
                 )} */}
 
-               
+
 
                 {/* 1. CHEMICAL SENSORS GRID */}
                 <div className="mb-8">
-                    <div className="mb-4">
-                        <h2 className="text-2xl font-bold text-gray-900">🧪 Chemical Sensors</h2>
-                        <p className="text-sm text-gray-600 mt-1">Real-time chemical analysis readings</p>
+                    <div className="mb-4 flex gap-6 items-center">
+                        <div>
+                            <h2 className="text-2xl font-bold text-gray-900">🧪 Chemical Sensors</h2>
+                            <p className="text-sm text-gray-600 mt-1">Real-time chemical analysis readings</p>
+                        </div>
+                        <div>
+                            <img src={iot1} className='w-56' />
+                        </div>
                     </div>
+
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                         <ChemicalSensorCard
                             label="pH Level"
@@ -275,17 +282,17 @@ export const ETongue = () => {
                 <div className="mb-8">
                     <MLResultCard
                         result={`Sample Status: ${mlResult.status === 'unsafe'
-                                ? 'Anomaly Detected'
-                                : mlResult.status === 'warning'
-                                    ? 'Moderate Variation'
-                                    : 'Stable Composition'
+                            ? 'Anomaly Detected'
+                            : mlResult.status === 'warning'
+                                ? 'Moderate Variation'
+                                : 'Stable Composition'
                             }`}
                         confidence={mlResult.confidence}
                         status={mlResult.status}
                     />
                 </div>
 
-              
+
 
                 {/* 4. COLOR VISUALIZATION */}
                 {/* <div className="mb-8">
