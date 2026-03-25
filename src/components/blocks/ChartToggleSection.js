@@ -53,8 +53,8 @@ const ChartToggleSection = ({ data, toggleOptions = ['R', 'G', 'B', 'Frequency']
                             key={option}
                             onClick={() => handleToggle(option)}
                             className={`px-3 py-1.5 rounded-lg font-medium text-xs transition-all duration-200 border-2 flex items-center gap-2 ${toggles[option]
-                                    ? `${colorMap[option].bg} ${colorMap[option].text} ${colorMap[option].border} border-2 scale-105`
-                                    : 'bg-gray-200 text-gray-500 border-gray-300 opacity-50'
+                                ? `${colorMap[option].bg} ${colorMap[option].text} ${colorMap[option].border} border-2 scale-105`
+                                : 'bg-gray-200 text-gray-500 border-gray-300 opacity-50'
                                 }`}
                         >
                             <span className={`w-2 h-2 rounded-full ${toggles[option] ? 'opacity-100' : 'opacity-30'}`}
@@ -72,8 +72,8 @@ const ChartToggleSection = ({ data, toggleOptions = ['R', 'G', 'B', 'Frequency']
                     <div
                         key={option}
                         className={`p-3 rounded-lg border-l-4 transition-all ${toggles[option]
-                                ? `bg-white border-gray-300 border-l-4`
-                                : `bg-gray-50 border-l-gray-300 opacity-50`
+                            ? `bg-white border-gray-300 border-l-4`
+                            : `bg-gray-50 border-l-gray-300 opacity-50`
                             }`}
                         style={toggles[option] ? { borderLeftColor: colorMap[option].color } : {}}
                     >
@@ -96,6 +96,7 @@ const ChartToggleSection = ({ data, toggleOptions = ['R', 'G', 'B', 'Frequency']
                 <div className="bg-gray-50 rounded-xl p-4 border border-gray-100">
                     <CustomApexChart
                         data={filteredData}
+                        title="RGB"
                         lineStyle="smooth"
                         lineWidth={2}
                         chartType="line"
