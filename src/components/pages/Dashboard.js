@@ -412,6 +412,7 @@ export const ETongue = () => {
     const callMLModel = async (data) => {
         try {
             const payload = {
+                ph: Number(data.ph) ||0,
                 tds: Number(data.dts) || 0,
                 voc: Number(data.voc) || 0,
                 r: Number(data.r?.slice(-1)[0]) || 0,
